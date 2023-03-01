@@ -1,7 +1,7 @@
 # Simple PHP Authorization (login/pass)
 Login form and authorization (hashed login/pass) for single PHP files
 ## Features
-- Timeout after a customizable period `$timeout` (defaults to 15 minutes)
+- Time out after a customizable period `$time_out` (defaults to 15 minutes)
 - Allow multiple logins in hashed `$credentials` array (defaults to "admin" and "password")
 - Add custom `$salt` (defaults to none)
 - Set a maximum number of failed login attempts via `$max_logins` (default 5)
