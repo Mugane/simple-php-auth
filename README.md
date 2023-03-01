@@ -8,7 +8,7 @@ Login form and authorization (hashed login/pass) for single PHP files
 - Set a maximum number of failed login attempts via `$max_logins` (default 5)
 - Set a minimum number of hours before a user may retry logging in after exceeding the maximum failed logins via `$ban_time` (defaults to 24). This is not super secure, since using a different computer/clearing cookies would allow retrying the login anyway. A better way (not implemented) would be to store the usernames that were tried (if they exist) on the server (in a text file for example) and block those. Or interface to fail2ban and block the IP. Also, it would be better to silently reject logins after banning (even if correct), instead of displaying a notice indicating that there was a ban. 
 - Set a maximum login time (even if there is activity) via `$max` (defaults to 86400 seconds/one day)
-- Log out using ?logout in the url
+- Log out using `?logout` in the url
 
 ## Caveats
 - You will need to implement your own method to log people out after inactivity; the script does not handle this proactively. This means that if a user session times out, the page content that may remain displayed to the user (on their browser) would still be present (auto logout would only happen when they manually navgate or reload the page.
