@@ -2,15 +2,15 @@
 	// Login system for a single php file:
 	// ----------------- Begin Login Section (add protected content after this section) -----------------
 	@session_start();
-    // --- start modifiable variables: ---
-    // $credentials contains unsalted hash for the login "admin" and "password" (replace with your hashed credentials):
+  		// --- start modifiable variables: ---
+  		// $credentials contains unsalted hash for the login "admin" and "password" (replace with your hashed credentials):
 	$credentials = array('8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918' => '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
 	$salt        = '';    // add random string here to salt your password hashes (vaguely more secure)
-  $max_logins  = 5;     // maximum number of failed login attempts before ban
+	$max_logins  = 5;     // maximum number of failed login attempts before ban
 	$ban_time    = 24;    // ban hours
-  $timeout     = 180;   // number of seconds before session timeout (since last active)
-  $max         = 86400; // maximum length of login (even with activity)
-    // --- end modifiable variables ---
+	$timeout     = 180;   // number of seconds before session timeout (since last active)
+	$max         = 86400; // maximum length of login (even with activity)
+ 		// --- end modifiable variables ---
 	$message     = ''; // placeholder for login error/status messages
 	if(@$_SESSION[$_COOKIE['PHPSESSID']]['auth']['ban_time'] && $_SESSION[$_COOKIE['PHPSESSID']]['auth']['ban_time'] > time()) exit; // this is not very secure
 	if(isset($_GET["logout"])) LOGGED_IN(0); // log out
