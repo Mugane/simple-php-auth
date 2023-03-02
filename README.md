@@ -11,7 +11,7 @@ Login form and authorization (hashed login/pass) for single PHP files
 - Log out using `?logout` in the url
 
 ## Caveats
-- You will need to implement your own method to log people out after inactivity; the script does not handle this proactively. This means that if a user session times out, the page content that may remain displayed to the user (on their browser) would still be present (auto logout would only happen when they manually navgate or reload the page.
+- You will need to implement your own method to log people out after inactivity; the script does not handle this proactively. This means that if a user session times out, the page content that may remain displayed to the user (on their browser) would still be present (auto-logout would only be triggered when they manually navigate or reload the page.
 
 ## Usage
 `include '/path/to/auth.php';` in your script. Make sure you modify the `$credentials` array and other optionally customizable parameters to store sha256 hashes of your username/passwords. To generate a sha256 hash of a string in bash, use `echo $(echo -n "texttohash" | sha256sum | cut -d " " -f1)`
