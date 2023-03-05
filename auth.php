@@ -14,6 +14,13 @@
 	$max         = 86400; // maximum length of login (even with activity)
  		// --- end modifiable variables ---
 	$message     = ''; // placeholder for login error/status messages
+		// If you don't want to use the cookie/phpsessionid, then replace that with some unique string. 
+		// It is only used to provide a pseudo-namespace for the session login details (unique value per user/session):
+	if(!isset($_COOKIE['PHPSESSID'])) { // check that we can actually use the cookie as the id for authorization 
+		!isset($_SESSION['cookie_try_count'])? $_SESSION['cookie_try_count'] = 1 : $_SESSION['cookie_try_count']++;
+		if($_SESSION['cookie_try_count'] > 1) { header('HTTP/1.0 418 I\'m a teapot'); exit('<h1>418 I\'m a Teapot</h1>Cookies are required in order to complete this service.'); }
+		else { header('location: '.$_SERVER['REQUEST_URI']); exit; } // Retry once
+	}
 	if(@$_SESSION[$_COOKIE['PHPSESSID']]['auth']['ban_time'] && $_SESSION[$_COOKIE['PHPSESSID']]['auth']['ban_time'] > time()) exit; // this is not very secure
 	if(isset($_GET["logout"])) LOGGED_IN(0); // log out
 	if(isset($_REQUEST["login"])) LOG_IN(@$_POST['login'],@$_POST['password']); // log in
