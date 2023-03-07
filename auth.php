@@ -1,6 +1,10 @@
 <?php
-	// Login system in a single php file.
-	// Tabs, obviously; Configurable editors exist for those with spacing hangups.
+	/* 
+	   Login system in a single php file.
+	   Tabs, obviously; Configurable editors exist for those with spacing hangups.
+	   © 2023 Peter Kionga-Kamau. MIT License with this comment block left intact.
+	   https://github.com/Mugane/simple-php-auth
+	*/
 	// ----------------- Begin Login Section (add protected content after this section) -----------------
 	@session_start();
  		// --- start modifiable variables: ---
