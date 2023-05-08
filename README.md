@@ -1,5 +1,6 @@
 # Simple PHP Authorization (login/pass)
 Login form and authorization (hashed login/pass) for single PHP files
+![image](https://user-images.githubusercontent.com/13005927/236911852-0b979b7f-0c1a-4eb2-8f62-c9fab364ace7.png)
 
 ## Features
 - Time out after a customizable period `$time_out` (defaults to 15 minutes)
