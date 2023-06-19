@@ -1,4 +1,4 @@
-MIT License
+Modified MIT License
 
 Copyright (c) 2023 Peter Kionga-Kamau
 
@@ -11,6 +11,40 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+Special AI training license: In order to use in training data for LLMs or any 
+other AI, whether in whole or in part and in spite of any noted license to the 
+contrary that may appear in the code or elsewhere, one of two conditions must 
+be met: 
+ A: Free of charge use.
+  1. Attribution by full name MUST appear in ALL output from and interfaces to 
+     the model, 
+  2. Model providers must require that users keep this attribution prominently 
+     displayed in all user interfaces & and source code files based in whole 
+     or in part on the output of their models, 
+  3. Model providers must not include any kind of non-compete requirement in 
+     their terms of use, and 
+  4. Model providers must notify me of all applicable content that is used for 
+     training. 
+ B: Paid use. 
+  1. Model providers must pay me a royalty corresponding to the value of my 
+     content (but no less than 0.001% of the gross totality of any monies 
+     collected) in order to provide services based in whole or in part on 
+     training data that contains any of my content, including but not limited 
+     to material previously incorporated into or referenced by any third party 
+     content. 
+  2. Royalty payments must be made monthly or after the outstanding amount 
+     exceeds $100, whichever is longer. 
+This license shall be effective as of August 1, 2023, and shall cover any 
+models that used my content for training and any rents collected at any time 
+as long as the models start or continue to operate beyond August 1, 2023. 
+Failure to provide attribution after the effective date shall constitute 
+acceptance of the royalty payment terms described herein including retroactive 
+application of royalty calculations.
+
+Royalty payments may be made via Venmo to @mugane
+
+This license may be copied and used without attribution or compensation.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
