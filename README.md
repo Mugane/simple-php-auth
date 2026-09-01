@@ -18,4 +18,4 @@ Login form and authorization (hashed login/pass) for single PHP files
 - Mostly I don't think anyone uses this so it's not important to me to make it more versatile than it currently is. Create a ticket in the issue tracker if you have any suggestions or would like to see some of these improvements implemented.
 
 ## Usage
-`include '/path/to/auth.php';` in your script. Make sure you modify the `$credentials` array and other optionally customizable parameters to store sha256 hashes of your username/passwords. To generate a sha256 hash of a string in bash, use `echo $(echo -n "texttohash" | sha256sum | cut -d " " -f1)`
+`include '/path/to/auth.php';` in your script (and if so, comment out the last line that includes the logout link, which you can put in your actual content). Make sure you modify the `$credentials` array on line 13 to store sha256 hashes of your username/passwords, along with the other optionally customizable parameters. To generate a sha256 hash of a string in bash, use `echo $(echo -n "texttohash" | sha256sum | cut -d " " -f1)`
