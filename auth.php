@@ -30,7 +30,7 @@
 	if(isset($_REQUEST["login"])) LOG_IN(@$_POST['login'],@$_POST['password']); // log in
 	if(!LOGGED_IN($time_out, $max)) SHOW_LOGIN();
 	function LOG_IN($u,$p) {
-		global $credentials,$max_logins,$ban_time;
+		global $credentials,$max_logins,$ban_time,$salt;
 		unset($_SESSION[$_COOKIE['PHPSESSID']]['auth']['fail_count']);
 		if(isset($credentials[hash('SHA256',$salt.trim($u))]) && @$credentials[hash('SHA256',$salt.trim($u))] == hash('SHA256',$salt.trim($p))) { // good login
 			$_SESSION[$_COOKIE['PHPSESSID']]['auth']['last_seen'] = time();
