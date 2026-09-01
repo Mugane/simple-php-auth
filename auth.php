@@ -68,7 +68,7 @@
 			return true;
 		} else {
 			if(!isset($_SESSION[$_COOKIE['PHPSESSID']]['auth']['login_time'])) $_SESSION[$_COOKIE['PHPSESSID']]['auth']['message'] = 'You need to log in to access this resource.'; // new login
-			else if($timeout == 0) $_SESSION[$_COOKIE['PHPSESSID']]['auth']['message'] = 'You have been logged out successfully.'; // log out
+			else if($time_out == 0) $_SESSION[$_COOKIE['PHPSESSID']]['auth']['message'] = 'You have been logged out successfully.'; // log out
 			else $_SESSION[$_COOKIE['PHPSESSID']]['auth']['message'] = 'Session expired. Please log in again.'; // time out
 			$_SESSION[$_COOKIE['PHPSESSID']]['auth']['url'] = $_SERVER['REQUEST_URI'];
 		}
